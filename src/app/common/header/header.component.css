@@ -1,0 +1,15 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 80px;
+    background-color: lightgray;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    z-index: 1026;
+}
+
+.red {
+    color: red;
+}

@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+.help-block {
+    font-size: small;
+    color: red;
+}
+
+.link, .ph-1 {
+    cursor: pointer;
+}
+
+.red {
+    color: red;
+}
+
+.ph-2 {
+    padding: 0 2em;
+}
+
+.ph-1 {
+    padding: 0 1em;
+}

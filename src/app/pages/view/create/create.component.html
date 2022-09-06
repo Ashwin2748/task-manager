@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+        <h5>{{ edit ? 'Update Project' : 'Create New Project' }}</h5>
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="createProject(projectForm)" name="form" #projectForm="ngForm">
+
+            <div class="form-floating mt-2">
+                <input type="text" 
+                    class="form-control" 
+                    id="floatingInput"
+                    required
+                    [(ngModel)]="projectName" 
+                    name="projectName"
+                    #project="ngModel"
+                    placeholder="Project Name">
+                <label for="floatingInput">Project Name</label>
+            </div>
+
+            <div class="help-block red" *ngIf="project.invalid && project.touched"> 
+                Project name is required 
+            </div>
+
+            <button class="w-100 mt-2 btn btn-lg btn-primary" type="submit">
+                {{ edit ? 'Update' : 'Create' }}
+            </button>
+        </form>
+    </div>
+</div>

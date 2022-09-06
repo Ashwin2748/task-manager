@@ -1,0 +1,48 @@
+<div class="w-100 form-signin">
+    <main class="form-signin">
+        <form (ngSubmit)="onSubmit(heroForm)" name="form" #heroForm="ngForm">
+
+            <div class="form-floating mt-2">
+                <input type="email" 
+                    class="form-control" 
+                    id="floatingInput"
+                    required
+                    email
+                    [(ngModel)]="emailAddress" 
+                    name="emailAddress"
+                    #email="ngModel" 
+                    placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+
+            <div class="help-block" *ngIf="email.invalid && email.touched"> 
+                Email is Invalid 
+            </div>
+
+            <div class="form-floating mt-2">
+                <input type="password" 
+                    class="form-control" 
+                    id="floatingInput"
+                    required
+                    [(ngModel)]="password" 
+                    name="password"
+                    #pass="ngModel" 
+                    placeholder="name@example.com">
+                <label for="floatingInput">Password</label>
+            </div>
+
+            <div class="help-block" *ngIf="pass.invalid && pass.touched"> 
+                Password is required 
+            </div>
+
+            <button class="w-100 mt-2 btn btn-lg btn-primary" type="submit">
+                Log In
+            </button>
+            
+            <div class="d-flex justify-content-center align-items-center mt-2">
+                <a class="link" (click)="navigateTo()"> New User ? Sign Up </a>
+            </div>
+
+        </form>
+    </main>
+</div>

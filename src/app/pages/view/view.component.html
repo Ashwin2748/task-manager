@@ -1,0 +1,11 @@
+<div class="w-50 mt-3">
+    <app-create [editProject]="editProject" (onCreateProject)="onCreateProject($event)"></app-create>
+</div>
+
+<ng-container *ngIf="projects && projects.length > 0">
+    <div class="widget row">
+        <div class="col-md-6 mt-3" *ngFor="let item of projects;">
+            <app-project [project]="item" (editTasks)="onEditTask($event)" (deleteProject)="onDeleteProject($event)" (editProject)="onEditProjectName(item)"></app-project>
+        </div>
+    </div>
+</ng-container>

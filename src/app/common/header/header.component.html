@@ -1,0 +1,19 @@
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <h3 class="d-flex align-items-center col-md-6 mb-2 mb-md-0 text-dark">
+      Multi-Task Manager
+    </h3>
+
+    <div class="col-md-3 text-end">
+      <ng-container *ngIf="username">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ username }}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" (click)="onLogOut()">Log Out</a>
+          </div>
+        </div>
+      </ng-container>
+      
+    </div>
+  </header>
